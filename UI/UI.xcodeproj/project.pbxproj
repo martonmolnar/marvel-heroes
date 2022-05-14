@@ -11,6 +11,11 @@
 		8BC9D19A282FBE4C0004D46B /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC9D18F282FBE4B0004D46B /* UI.framework */; };
 		8BC9D19F282FBE4C0004D46B /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9D19E282FBE4C0004D46B /* UITests.swift */; };
 		8BC9D1A0282FBE4C0004D46B /* UI.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BC9D192282FBE4B0004D46B /* UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BC9D1D3282FCF280004D46B /* HeroesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9D1D1282FCF280004D46B /* HeroesCell.swift */; };
+		8BC9D1D4282FCF280004D46B /* HeroesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BC9D1D2282FCF280004D46B /* HeroesCell.xib */; };
+		8BC9D1D8282FD1E00004D46B /* UIDataBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9D1D7282FD1E00004D46B /* UIDataBinder.swift */; };
+		8BC9D1DB282FD6590004D46B /* HeroDetailsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9D1DA282FD6590004D46B /* HeroDetailsComponent.swift */; };
+		8BC9D1DD282FD6700004D46B /* HeroDetailsComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BC9D1DC282FD6700004D46B /* HeroDetailsComponent.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		8BC9D193282FBE4B0004D46B /* UI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = UI.docc; sourceTree = "<group>"; };
 		8BC9D199282FBE4C0004D46B /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC9D19E282FBE4C0004D46B /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
+		8BC9D1D1282FCF280004D46B /* HeroesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCell.swift; sourceTree = "<group>"; };
+		8BC9D1D2282FCF280004D46B /* HeroesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesCell.xib; sourceTree = "<group>"; };
+		8BC9D1D7282FD1E00004D46B /* UIDataBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDataBinder.swift; sourceTree = "<group>"; };
+		8BC9D1DA282FD6590004D46B /* HeroDetailsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsComponent.swift; sourceTree = "<group>"; };
+		8BC9D1DC282FD6700004D46B /* HeroDetailsComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroDetailsComponent.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,8 @@
 		8BC9D191282FBE4B0004D46B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8BC9D1D5282FD1B60004D46B /* Common */,
+				8BC9D1CD282FCE5E0004D46B /* Heroes */,
 				8BC9D192282FBE4B0004D46B /* UI.h */,
 				8BC9D193282FBE4B0004D46B /* UI.docc */,
 			);
@@ -83,6 +95,65 @@
 				8BC9D19E282FBE4C0004D46B /* UITests.swift */,
 			);
 			path = UITests;
+			sourceTree = "<group>";
+		};
+		8BC9D1CD282FCE5E0004D46B /* Heroes */ = {
+			isa = PBXGroup;
+			children = (
+				8BC9D1CF282FCEC60004D46B /* Details */,
+				8BC9D1CE282FCE840004D46B /* List */,
+			);
+			path = Heroes;
+			sourceTree = "<group>";
+		};
+		8BC9D1CE282FCE840004D46B /* List */ = {
+			isa = PBXGroup;
+			children = (
+				8BC9D1D0282FCED60004D46B /* Components */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		8BC9D1CF282FCEC60004D46B /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				8BC9D1D9282FD6150004D46B /* Components */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		8BC9D1D0282FCED60004D46B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8BC9D1D1282FCF280004D46B /* HeroesCell.swift */,
+				8BC9D1D2282FCF280004D46B /* HeroesCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		8BC9D1D5282FD1B60004D46B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8BC9D1D6282FD1BF0004D46B /* Porotocols */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8BC9D1D6282FD1BF0004D46B /* Porotocols */ = {
+			isa = PBXGroup;
+			children = (
+				8BC9D1D7282FD1E00004D46B /* UIDataBinder.swift */,
+			);
+			path = Porotocols;
+			sourceTree = "<group>";
+		};
+		8BC9D1D9282FD6150004D46B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8BC9D1DA282FD6590004D46B /* HeroDetailsComponent.swift */,
+				8BC9D1DC282FD6700004D46B /* HeroDetailsComponent.xib */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +248,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BC9D1DD282FD6700004D46B /* HeroDetailsComponent.xib in Resources */,
+				8BC9D1D4282FCF280004D46B /* HeroesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BC9D1DB282FD6590004D46B /* HeroDetailsComponent.swift in Sources */,
+				8BC9D1D8282FD1E00004D46B /* UIDataBinder.swift in Sources */,
 				8BC9D194282FBE4B0004D46B /* UI.docc in Sources */,
+				8BC9D1D3282FCF280004D46B /* HeroesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +472,7 @@
 		8BC9D1A7282FBE4C0004D46B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C2374G5TD6;
@@ -412,6 +489,7 @@
 		8BC9D1A8282FBE4C0004D46B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C2374G5TD6;
