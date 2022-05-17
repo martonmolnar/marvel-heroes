@@ -6,14 +6,17 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class HeroesListScreen: BaseViewController {
     // MARK: - Components
     private let stackComponent = HeroesStackComponent()
+    private let tableViewComponent = TableViewComponent<HeroesCell>(id: AccessibilityId.list)
     
     // MARK: - Properties
-//    var dataBinder: HeroesListDataBinder?
-//    var eventListener: HeroesListEventListener?
+    var dataBinder: HeroesListDataBinder?
+    var eventListener: HeroesListEventListener?
 
 //    override var stackViewTopPadding: CGFloat { Constants.stackViewTopPadding }
 //    private let bag = DisposeBag()
@@ -30,6 +33,10 @@ final class HeroesListScreen: BaseViewController {
 // MARK: - Private
 private extension HeroesListScreen {
     func setupComponents() {
+        setupStackComponent()
+        add(component: stackComponent, with: Constants.componentSpacing)
+        tableViewComponent.config = TableViewComponentConfig(pullToRefreshEnabled: true)
+        add(component: tableViewComponent)
     }
 
     func setupStackComponent() {
@@ -41,8 +48,21 @@ private extension HeroesListScreen {
     }
 
     func setupBindings() {
-        setupStackComponent()
-        add(component: stackComponent)
+        let events = HeroesListEventListener.Events(
+            viewWillAppear: rx.viewWillAppear,
+            listEvents: tableViewComponent.events,
+            cellEvents: ControlEvent(events: tableViewComponent.cellEvents)
+        )
+        eventListener?.listen(events: events)
+
+        guard let data = dataBinder?.bind() else { return }
+
+        self.title = data.title
+        tableViewComponent.bind(data: data.listData)
+
+//        data.isLoading
+//            .drive(LoadingScreen.rx.loading)
+//            .disposed(by: bag)
     }
 }
 

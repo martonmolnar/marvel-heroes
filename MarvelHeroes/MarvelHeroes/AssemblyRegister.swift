@@ -7,6 +7,7 @@
 
 import Swinject
 import Common
+import Core
 import UI
 
 final public class AssemblyRegister {
@@ -26,7 +27,7 @@ public extension AssemblyRegister {
 //        assembler?.apply(assembly: AppAssembly())
 //        assembler?.apply(assemblies: CoreAssemblyCollector.getBaseAssemblies())
 //        assembler?.apply(assemblies: UIAssemblyCollector.getBaseAssemblies())
-//        assembler?.apply(assemblies: CoreAssemblyCollector.getAssemblies())
+        assembler?.apply(assemblies: CoreAssemblyCollector.getAssemblies())
         assembler?.apply(assemblies: UIAssemblyCollector.getAssemblies())
     }
 }
