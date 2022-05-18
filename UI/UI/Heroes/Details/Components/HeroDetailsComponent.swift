@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class HeroDetailsComponent: UIView {
 
@@ -13,26 +15,38 @@ class HeroDetailsComponent: UIView {
     @IBOutlet private weak var detailsStackView: UIStackView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    // MARK: - Properties
+    private var bag = DisposeBag()
+
+    // MARK: - UIView overrides
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
-    */
 
 }
 
 extension HeroDetailsComponent: UIDataBinder {
     struct Data {
-        let image: UIImage
-        let name: String
-        let description: String
+        let image: Driver<UIImage?>
+        let name: Driver<String>
+        let description: Driver<String>
     }
 
     func bind(data: Data) {
-        heroImageView.image = data.image
-        nameLabel.text = data.name
-        descriptionLabel.text = data.description
+        data.image
+            .drive(heroImageView.rx.image)
+            .disposed(by: bag)
+
+        data.name
+            .drive(nameLabel.rx.text)
+            .disposed(by: bag)
+
+        data.description
+            .map({ (description: String) -> String in
+                return description.isEmpty ? "There is no description to this hero" : description
+            })
+            .drive(descriptionLabel.rx.text)
+            .disposed(by: bag)
     }
 }

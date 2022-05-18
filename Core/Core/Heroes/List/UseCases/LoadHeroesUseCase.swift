@@ -28,9 +28,9 @@ final class LoadHeroesUseCase {
 
 // MARK: - LoadHeroesUseCaseInterface
 extension LoadHeroesUseCase: LoadHeroesUseCaseInterface {
-    func execute() {
+    func execute(with searchText: String?) {
 
-        service.getHeroes()
+        service.getHeroes(searchText: searchText)
             .do(onSubscribe: { [weak self] in
                 self?.dispatchLoadHeroes()
             })

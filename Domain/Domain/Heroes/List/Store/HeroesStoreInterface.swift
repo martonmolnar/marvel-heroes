@@ -1,11 +1,10 @@
 //
 //  HeroesStoreInterface.swift
-//  Core
+//  Domain
 //
-//  Created by Molnar Marton on 2022. 05. 15..
+//  Created by Molnar Marton on 2022. 05. 18..
 //
 
-import Domain
 import Common
 
 public protocol HeroesStoreInterface: Store where BoundedContext == HeroState {}

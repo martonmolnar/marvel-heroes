@@ -57,7 +57,12 @@ private extension HeroesAssembly {
         container.register(LoadHeroesUseCaseInterface.self) { resolver in
             HeroesUseCaseFactory.makeLoadHeroesUseCase(with: resolver)
         }
-        .inObjectScope(.graph)
+        .inObjectScope(.transient)
+
+        container.register(LoadHeroDetailsUseCaseInterface.self) { resolver in
+            HeroesUseCaseFactory.makeLoadHeroDetailsUseCase(with: resolver)
+        }
+        .inObjectScope(.transient)
     }
 }
 

@@ -43,6 +43,16 @@ private extension HeroesAssembly {
             screen.eventListener = resolver.get()
         }
         .inObjectScope(.graph)
+
+
+        container.register(HeroDetailsScreen.self) { _ in
+            HeroDetailsScreen()
+        }
+        .initCompleted { resolver, screen in
+            screen.dataBinder = resolver.get()
+            screen.eventListener = resolver.get()
+        }
+        .inObjectScope(.graph)
     }
 }
 
@@ -55,6 +65,14 @@ private extension HeroesAssembly {
                 state: store.getState(),
                 loadHeroesUseCase: resolver.get(),
                 coordinator: resolver.get())
+        }
+        .inObjectScope(.graph)
+
+        container.register(HeroDetailsEventListener.self) { resolver in
+            let store = resolver.resolve(AnyStore<HeroState>.self)!
+            return HeroDetailsEventListener(
+                state: store.getState(),
+                loadHeroDetailsUseCase: resolver.get())
         }
         .inObjectScope(.graph)
     }
@@ -70,6 +88,14 @@ private extension HeroesAssembly {
                 mapper: resolver.get())
         }
         .inObjectScope(.graph)
+
+        container.register(HeroDetailsDataBinder.self) { resolver in
+            let store = resolver.resolve(AnyStore<HeroState>.self)!
+            return HeroDetailsDataBinder(
+                state: store.getState(),
+                mapper: resolver.get())
+        }
+        .inObjectScope(.graph)
     }
 }
 
@@ -78,6 +104,11 @@ private extension HeroesAssembly {
     func registerMappers(to container: Container) {
         container.register(HeroesListItemUIMapperInterface.self) { _ in
             DefaultHeroesListItemUIMapper()
+        }
+        .inObjectScope(.graph)
+
+        container.register(HeroDetailsUIMapperInterface.self) { _ in
+            HeroDetailsUIMapper()
         }
         .inObjectScope(.graph)
     }

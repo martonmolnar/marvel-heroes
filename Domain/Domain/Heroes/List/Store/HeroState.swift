@@ -11,13 +11,13 @@ public struct HeroState {
     public var heroes: Swift.Result<[Hero], HeroError>?
     public var isLoading: Bool
 
-    public var heroDetails: HeroDetails?
+    public var heroDetails: Hero?
     public var heroDetailsError: Set<HeroDetailsError>
     public var isDetailLoading: Bool
 
     public init(heroes: Swift.Result<[Hero], HeroError>?,
                 isLoading: Bool,
-                heroDetails: HeroDetails?,
+                heroDetails: Hero?,
                 heroDetailsError: Set<HeroDetailsError>,
                 isDetailLoading: Bool) {
         self.heroes = heroes

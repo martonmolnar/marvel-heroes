@@ -10,4 +10,5 @@ import Common
 public enum HeroesActions: Action, Equatable {
     case didStartLoadingHeroes
     case didLoadHeroes(heroes: [Hero])
+    case didLoadHeroDetails(details: Hero)
 }

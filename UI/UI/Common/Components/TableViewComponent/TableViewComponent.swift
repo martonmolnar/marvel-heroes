@@ -49,12 +49,13 @@ extension TableViewComponent: UIDataBinder {
         self.bind(loading: data.loading)
 
         let dataSource = Driver.combineLatest(data.errorOccurred, data.items)
-            .debug("")
             .do( onNext: { [weak self] errorOccurred, items in
                 self?.tableView.allowsSelection = !errorOccurred
             })
             .map { errorOccurred, items -> [CellType] in
-                return items.map { CellType.contentItem(data: $0) }
+                return items.map({ data -> TableViewComponent<Cell>.CellType in
+                    return CellType.contentItem(data: data)
+                })//.map { CellType.contentItem(data: $0) }
             }
         self.bind(items: dataSource)
         self.bind(contentInset: data.contentInset)
@@ -112,7 +113,6 @@ private extension TableViewComponent {
     // MARK: Binding
     func bind(items: Driver<[CellType]>) {
         items.asObservable()
-            .debug("items")
             .bind(to: tableView.rx.items) { [weak self] _, row, element -> UITableViewCell in
                 guard let self = self else { return UITableViewCell() }
 

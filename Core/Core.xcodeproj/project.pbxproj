@@ -31,7 +31,6 @@
 		8B91316528319F4500E870AA /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91316428319F4500E870AA /* ApiResult.swift */; };
 		8B9131762831AAE000E870AA /* HeroesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9131752831AAE000E870AA /* HeroesAssembly.swift */; };
 		8B9131792831ABBD00E870AA /* HeroesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9131782831ABBD00E870AA /* HeroesStore.swift */; };
-		8B91317B2831AC0C00E870AA /* HeroesStoreInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91317A2831AC0C00E870AA /* HeroesStoreInterface.swift */; };
 		8B91317E2831AC5500E870AA /* BaseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91317D2831AC5500E870AA /* BaseStore.swift */; };
 		8B9131892831B09500E870AA /* HeroesUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9131882831B09500E870AA /* HeroesUseCaseFactory.swift */; };
 		8B91318E2831B27200E870AA /* CoreAssemblyCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91318D2831B27200E870AA /* CoreAssemblyCollector.swift */; };
@@ -42,6 +41,7 @@
 		8B9131A028323BF600E870AA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91319F28323BF600E870AA /* APIClient.swift */; };
 		8B9131A62833D5AB00E870AA /* HeroesModelFactory+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9131A52833D5AB00E870AA /* HeroesModelFactory+Core.swift */; };
 		8B9131A82833D67100E870AA /* MockLoadHeroesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9131A72833D67100E870AA /* MockLoadHeroesUseCase.swift */; };
+		8B91366C2835695600E870AA /* LoadHeroDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91366B2835695600E870AA /* LoadHeroDetailsUseCase.swift */; };
 		8BC9D1B8282FBE620004D46B /* Core.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9D1B7282FBE620004D46B /* Core.docc */; };
 		8BC9D1BE282FBE620004D46B /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC9D1B3282FBE620004D46B /* Core.framework */; };
 		8BC9D1C3282FBE620004D46B /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9D1C2282FBE620004D46B /* CoreTests.swift */; };
@@ -100,7 +100,6 @@
 		8B91316428319F4500E870AA /* ApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
 		8B9131752831AAE000E870AA /* HeroesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesAssembly.swift; sourceTree = "<group>"; };
 		8B9131782831ABBD00E870AA /* HeroesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesStore.swift; sourceTree = "<group>"; };
-		8B91317A2831AC0C00E870AA /* HeroesStoreInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesStoreInterface.swift; sourceTree = "<group>"; };
 		8B91317D2831AC5500E870AA /* BaseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStore.swift; sourceTree = "<group>"; };
 		8B9131882831B09500E870AA /* HeroesUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesUseCaseFactory.swift; sourceTree = "<group>"; };
 		8B91318D2831B27200E870AA /* CoreAssemblyCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssemblyCollector.swift; sourceTree = "<group>"; };
@@ -111,6 +110,7 @@
 		8B91319F28323BF600E870AA /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		8B9131A52833D5AB00E870AA /* HeroesModelFactory+Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeroesModelFactory+Core.swift"; sourceTree = "<group>"; };
 		8B9131A72833D67100E870AA /* MockLoadHeroesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoadHeroesUseCase.swift; sourceTree = "<group>"; };
+		8B91366B2835695600E870AA /* LoadHeroDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadHeroDetailsUseCase.swift; sourceTree = "<group>"; };
 		8BC9D1B3282FBE620004D46B /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC9D1B6282FBE620004D46B /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		8BC9D1B7282FBE620004D46B /* Core.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Core.docc; sourceTree = "<group>"; };
@@ -193,6 +193,7 @@
 			children = (
 				8B913119283183D500E870AA /* LoadHeroesUseCase.swift */,
 				8B9131A72833D67100E870AA /* MockLoadHeroesUseCase.swift */,
+				8B91366B2835695600E870AA /* LoadHeroDetailsUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -284,7 +285,6 @@
 			isa = PBXGroup;
 			children = (
 				8B9131782831ABBD00E870AA /* HeroesStore.swift */,
-				8B91317A2831AC0C00E870AA /* HeroesStoreInterface.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -556,12 +556,12 @@
 				8B91317E2831AC5500E870AA /* BaseStore.swift in Sources */,
 				8B9131A82833D67100E870AA /* MockLoadHeroesUseCase.swift in Sources */,
 				8B91312E2831895300E870AA /* APIClientError.swift in Sources */,
-				8B91317B2831AC0C00E870AA /* HeroesStoreInterface.swift in Sources */,
 				8B91316528319F4500E870AA /* ApiResult.swift in Sources */,
 				8B9131302831898500E870AA /* Coding.swift in Sources */,
 				8B91313E28318E6A00E870AA /* HeroApiModel.swift in Sources */,
 				8B91313A28318D4200E870AA /* HeroesListApiModel.swift in Sources */,
 				8B91311A283183D500E870AA /* LoadHeroesUseCase.swift in Sources */,
+				8B91366C2835695600E870AA /* LoadHeroDetailsUseCase.swift in Sources */,
 				8B9131902831B37600E870AA /* CommonAssembly.swift in Sources */,
 				8B91313428318AA800E870AA /* HeroServiceInterface.swift in Sources */,
 				8B91313628318BB200E870AA /* HeroesListAPI.swift in Sources */,

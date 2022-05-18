@@ -7,7 +7,8 @@
 
 public enum HeroesModelFactory {
     public static func makeHeroesState() -> HeroState {
-        .init(
+        
+        return HeroState(
             heroes: nil,
             isLoading: false,
             heroDetails: nil,

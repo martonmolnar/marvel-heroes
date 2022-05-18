@@ -17,4 +17,10 @@ enum HeroesUseCaseFactory {
             listItemMapper: resolver.get(),
             dispatcher: dispatcher)
     }
+
+    static func makeLoadHeroDetailsUseCase(with resolver: Resolver) -> LoadHeroDetailsUseCaseInterface {
+        let dispatcher = resolver.resolve(DispatcherInterface.self)!
+        return LoadHeroDetailsUseCase(
+            dispatcher: dispatcher)
+    }
 }

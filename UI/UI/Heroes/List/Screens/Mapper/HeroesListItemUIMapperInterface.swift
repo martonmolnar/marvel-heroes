@@ -9,6 +9,7 @@ import Common
 import Domain
 import RxCocoa
 import RxSwift
+import UIKit
 
 protocol HeroesListItemUIMapperInterface {
     func map(from state: HeroState) -> [HeroesCell.Data]?
@@ -31,16 +32,16 @@ private extension DefaultHeroesListItemUIMapper {
 
     func listItem(from hero: Hero) -> HeroesCell.Data {
         return HeroesCell.Data(
-            //image: UIImage(),
+            image: image(from: hero),
             title: title(from: hero))
     }
 
-//    func icon(from hero: Hero) -> Driver<UIImage?> {
-//        return Observable.just(hero.imageUri)
-//            .flatMap { ImageDownloader.download(from: $0) }
-//            .startWith(Constants.placeholderIcon)
-//            .asDriver(onErrorJustReturn: Constants.placeholderIcon)
-//    }
+    func image(from hero: Hero) -> Driver<UIImage?> {
+        return Observable.just(hero.imageUri)
+            .flatMap { ImageDownloader.download(from: $0) }
+            .startWith(UIImage(named: "image_not_available"))
+            .asDriver(onErrorJustReturn: UIImage(named: "image_not_available"))
+    }
 
     func title(from hero: Hero) -> String {
         return hero.name

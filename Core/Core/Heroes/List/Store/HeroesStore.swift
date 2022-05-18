@@ -19,6 +19,8 @@ final class HeroesStore: BaseStore<HeroState>, HeroesStoreInterface {
                 self.startLoading()
             case .didLoadHeroes(let heroes):
                 self.update(heroes: heroes)
+            case .didLoadHeroDetails(let details):
+                self.update(hero: details)
             }
         }
     }
@@ -36,6 +38,13 @@ private extension HeroesStore {
         modify { state in
             state.isLoading = false
             state.heroes = .success(heroes)
+        }
+    }
+
+    func update(hero: Hero) {
+        modify { state in
+            state.isLoading = false
+            state.heroDetails = hero
         }
     }
 }

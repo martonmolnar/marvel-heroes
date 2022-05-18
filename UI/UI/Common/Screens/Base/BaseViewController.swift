@@ -7,17 +7,24 @@
 
 import UIKit
 
-public class BaseViewController: UIViewController {
+open class StaticViewController: UIViewController {
     // MARK: - Properties
     public private(set) lazy var topStackView = setupTopStackView()
+    public private(set) lazy var topFloatingStackView = setupTopFloatingStackView()
     public private(set) lazy var contentStackView = setupContentStackView()
+    public private(set) lazy var bottomStackView = setupBottomStackView()
+    public private(set) lazy var bottomFloatingStackView = setupBottomFloatingStackView()
 
     private let topContainerView = UIView.instance()
-    private let scrollView = UIScrollView.instance()
+    private var topFloatingContainerView: UIView!
+    private let containerView = UIView.instance()
+    private let bottomContainerView = UIView.instance()
+    private var bottomFloatingContainerView: UIView!
     private var topContainerViewHeight: NSLayoutConstraint!
+    private var bottomContainerViewHeight: NSLayoutConstraint!
 
     open var contentContainerView: UIView {
-        scrollView
+        containerView
     }
     open var contentDistribution: UIStackView.Distribution {
         .fillEqually
@@ -29,12 +36,13 @@ public class BaseViewController: UIViewController {
 
         setup()
         setupTopContainer()
+        setupBottomContainer()
         setupContentContainer()
     }
 }
 
 // MARK: - Public
-public extension BaseViewController {
+public extension StaticViewController {
     // MARK: Content
     func add(component: Component, with spacing: CGFloat = 0) {
         contentStackView.addArrangedSubview(component)
@@ -67,6 +75,30 @@ public extension BaseViewController {
         }
     }
 
+    // MARK: Top floating
+    func add(topFloatingComponent: Component, with spacing: CGFloat = 0) {
+        topFloatingStackView.addArrangedSubview(topFloatingComponent)
+        if spacing != 0 {
+            topFloatingStackView.setCustomSpacing(spacing, after: topFloatingComponent)
+        }
+    }
+
+    // MARK: Bottom
+    func add(bottomComponent: Component, with spacing: CGFloat = 0) {
+        bottomStackView.addArrangedSubview(bottomComponent)
+        if spacing != 0 {
+            bottomStackView.setCustomSpacing(spacing, after: bottomComponent)
+        }
+    }
+
+    // MARK: Bottom floating
+    func add(bottomFloatingComponent: Component, with spacing: CGFloat = 0) {
+        bottomFloatingStackView.addArrangedSubview(bottomFloatingComponent)
+        if spacing != 0 {
+            bottomFloatingStackView.setCustomSpacing(spacing, after: bottomFloatingComponent)
+        }
+    }
+
     // MARK: - Common
     func addEmptyComponent(to stackView: UIStackView, height: CGFloat = 0) {
         let empty = Component.instance()
@@ -76,7 +108,7 @@ public extension BaseViewController {
 }
 
 // MARK: - Setup
-private extension BaseViewController {
+private extension StaticViewController {
     // MARK: Setup
     func setup() {
         view.backgroundColor = .lightGray
@@ -97,13 +129,27 @@ private extension BaseViewController {
         ])
     }
 
+    func setupBottomContainer() {
+        view.addSubview(bottomContainerView)
+
+        bottomContainerViewHeight = bottomContainerView.heightAnchor.constraint(equalToConstant: 0)
+        bottomContainerViewHeight.priority = .required
+
+        bottomContainerView.anchorToSuperview(top: false, bottom: false)
+        NSLayoutConstraint.activate([
+            bottomContainerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            bottomContainerView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            bottomContainerViewHeight
+        ])
+    }
+
     func setupContentContainer() {
         view.addSubview(contentContainerView)
 
         contentContainerView.anchorToSuperview(top: false, bottom: false)
         NSLayoutConstraint.activate([
             contentContainerView.topAnchor.constraint(equalTo: topContainerView.bottomAnchor, constant: Constants.stackviewSpacing),
-//            contentContainerView.bottomAnchor.constraint(equalTo: bottomContainerView.topAnchor, constant: Constants.stackviewSpacing)
+            contentContainerView.bottomAnchor.constraint(equalTo: bottomContainerView.topAnchor, constant: Constants.stackviewSpacing)
         ])
     }
 
@@ -120,6 +166,32 @@ private extension BaseViewController {
         return stackView
     }
 
+    func setupTopFloatingStackView() -> UIStackView {
+        topFloatingContainerView = UIView.instance()
+        view.addSubview(topFloatingContainerView)
+        topFloatingContainerView.anchorToSuperview(top: false, bottom: false)
+        topFloatingContainerView.topAnchor.constraint(equalTo: topContainerView.bottomAnchor).isActive = true
+
+        let stackView = UIStackView.instance()
+        stackView.axis = .vertical
+        topFloatingContainerView.addSubview(stackView)
+        stackView.anchorToSuperview()
+        stackView.widthAnchor.constraint(equalTo: topFloatingContainerView.widthAnchor).isActive = true
+        return stackView
+    }
+
+    func setupBottomStackView() -> UIStackView {
+        let stackView = UIStackView.instance()
+        stackView.axis = .vertical
+        bottomContainerView.addSubview(stackView)
+        stackView.anchorToSuperview()
+        stackView.widthAnchor.constraint(equalTo: bottomContainerView.widthAnchor).isActive = true
+
+        bottomContainerViewHeight.priority = .fittingSizeLevel
+
+        return stackView
+    }
+
     func setupContentStackView() -> UIStackView {
         let stackView = UIStackView.instance()
         stackView.axis = .vertical
@@ -129,10 +201,24 @@ private extension BaseViewController {
         stackView.widthAnchor.constraint(equalTo: contentContainerView.widthAnchor).isActive = true
         return stackView
     }
+
+    func setupBottomFloatingStackView() -> UIStackView {
+        bottomFloatingContainerView = UIView.instance()
+        view.addSubview(bottomFloatingContainerView)
+        bottomFloatingContainerView.anchorToSuperview(top: false, bottom: false)
+        bottomFloatingContainerView.bottomAnchor.constraint(equalTo: bottomContainerView.topAnchor).isActive = true
+
+        let stackView = UIStackView.instance()
+        stackView.axis = .vertical
+        bottomFloatingContainerView.addSubview(stackView)
+        stackView.anchorToSuperview()
+        stackView.widthAnchor.constraint(equalTo: bottomFloatingContainerView.widthAnchor).isActive = true
+        return stackView
+    }
 }
 
 // MARK: - Constants
-private extension BaseViewController {
+private extension StaticViewController {
     enum Constants {
         static let stackviewSpacing: CGFloat = 0
     }

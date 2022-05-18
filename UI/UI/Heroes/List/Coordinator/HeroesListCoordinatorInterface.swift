@@ -6,7 +6,8 @@
 //
 
 import Common
+import Domain
 
 protocol HeroesListCoordinatorInterface: Coordinator {
-    func didSelectHero(id: Int)
+    func didSelectHero(hero: Hero)
 }

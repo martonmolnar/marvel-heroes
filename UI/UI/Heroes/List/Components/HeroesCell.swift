@@ -35,13 +35,15 @@ class HeroesCell: UITableViewCell {
 // MARK: - Data binding
 extension HeroesCell: UIDataBinder {
     struct Data {
-//        let image: UIImage
+        let image: Driver<UIImage?>
         let title: String
     }
 
     func bind(data: Data) {
-//        heroImageView.image = data.image
         heroTitleLabel.text = data.title
+        data.image
+            .drive(heroImageView.rx.image)
+            .disposed(by: bag)
     }
 }
 

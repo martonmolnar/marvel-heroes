@@ -19,8 +19,8 @@ final class DefaultHeroService {
 
 // MARK: - HeroServiceInterface
 extension DefaultHeroService: HeroServiceInterface {
-    func getHeroes() -> Single<Heroes.Hero.GetHeroesList.Response> {
-        let request = Heroes.Hero.GetHeroesList.Request()
+    func getHeroes(searchText: String?) -> Single<Heroes.Hero.GetHeroesList.Response> {
+        let request = Heroes.Hero.GetHeroesList.Request(searchText: searchText)
 
         return apiClient.make(request)
     }
