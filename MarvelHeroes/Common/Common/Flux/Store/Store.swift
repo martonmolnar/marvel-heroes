@@ -9,7 +9,8 @@ import RxSwift
 
 public typealias Reducer = (Action) -> Void
 
-public protocol Store {
+// sourcery: associatedtype = "BoundedContext: State"
+public protocol Store: AutoMockable {
     associatedtype BoundedContext: State
 
     func setDispatchToken(_ token: DispatchToken?, onDeinit: @escaping () -> Void)

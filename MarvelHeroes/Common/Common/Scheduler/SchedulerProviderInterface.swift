@@ -7,6 +7,6 @@
 
 import RxSwift
 
-public protocol SchedulerProviderInterface {
+public protocol SchedulerProviderInterface: AutoMockable  {
     var mainScheduler: SchedulerType { get }
 }

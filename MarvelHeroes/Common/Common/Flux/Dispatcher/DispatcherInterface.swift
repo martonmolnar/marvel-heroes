@@ -7,7 +7,7 @@
 
 public typealias DispatchToken = String
 
-public protocol DispatcherInterface {
+public protocol DispatcherInterface: AutoMockable {
     func dispatch(_ action: Action)
     func register<T: Store>(store: T) -> DispatchToken
     func unregister(token: DispatchToken?)

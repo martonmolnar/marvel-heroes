@@ -5,7 +5,9 @@
 //  Created by Molnar Marton on 2022. 05. 15..
 //
 
-public protocol Mapper {
+// sourcery: associatedtype = "InputModel"
+// sourcery: associatedtype = "OutputModel"
+public protocol Mapper: AutoMockable {
     associatedtype InputModel
     associatedtype OutputModel
 
