@@ -6,6 +6,7 @@
 //
 
 import Common
+import Domain
 import RxSwift
 
 final class HeroesListCoordinator {
@@ -25,7 +26,10 @@ extension HeroesListCoordinator: HeroesListCoordinatorInterface {
     func start(payload: QueryParameters?) {
     }
 
-    func didSelectHero(id: Int) {
+    func didSelectHero(hero: Hero) {
+        navigator.transition(to: HeroDetailsScreen.self,
+                             transition: .push,
+                             with: .heroDetails(hero))
     }
 }
 

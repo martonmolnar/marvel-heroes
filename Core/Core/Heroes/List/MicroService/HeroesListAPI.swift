@@ -14,8 +14,24 @@ public enum GetHeroesList {
 
     public final class Request: APIRequest<Response> {
 
-        public init() {
+        public struct Options {
+            public var searchText: String?
+
+            public init(searchText: String? = nil) {
+                self.searchText = searchText
+            }
+        }
+
+        public var options: Options
+
+        public init(options: Options) {
+            self.options = options
             super.init(service: GetHeroesList.service)
+        }
+
+        public convenience init(searchText: String? = nil) {
+            let options = Options(searchText: searchText)
+            self.init(options: options)
         }
 
         public override var queryParameters: [String: Any] {
@@ -23,6 +39,9 @@ public enum GetHeroesList {
               params["apikey"] = "bef2a08eac53f8c6166af12de364ccad"
               params["ts"] = "1"
               params["hash"] = "370e791ac6d85c7c8f079cc225268753"
+            if let searchText = options.searchText {
+              params["nameStartsWith"] = searchText
+            }
             return params
         }
     }

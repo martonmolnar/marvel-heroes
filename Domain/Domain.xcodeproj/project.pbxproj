@@ -18,6 +18,8 @@
 		8B9131832831AF0000E870AA /* HeroState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9131822831AF0000E870AA /* HeroState.swift */; };
 		8B9131862831B00100E870AA /* HeroesModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9131852831B00100E870AA /* HeroesModelFactory.swift */; };
 		8B9131962832319B00E870AA /* ServerAddressProviderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9131952832319B00E870AA /* ServerAddressProviderInterface.swift */; };
+		8B9136452834F61700E870AA /* HeroesStoreInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9136442834F61700E870AA /* HeroesStoreInterface.swift */; };
+		8B91366E28356A5900E870AA /* LoadHeroDetailsUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91366D28356A5900E870AA /* LoadHeroDetailsUseCaseInterface.swift */; };
 		8BC9D170282FBE300004D46B /* Domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9D16F282FBE300004D46B /* Domain.docc */; };
 		8BC9D176282FBE300004D46B /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC9D16B282FBE300004D46B /* Domain.framework */; };
 		8BC9D17B282FBE300004D46B /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9D17A282FBE300004D46B /* DomainTests.swift */; };
@@ -59,6 +61,8 @@
 		8B9131822831AF0000E870AA /* HeroState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroState.swift; sourceTree = "<group>"; };
 		8B9131852831B00100E870AA /* HeroesModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesModelFactory.swift; sourceTree = "<group>"; };
 		8B9131952832319B00E870AA /* ServerAddressProviderInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAddressProviderInterface.swift; sourceTree = "<group>"; };
+		8B9136442834F61700E870AA /* HeroesStoreInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesStoreInterface.swift; sourceTree = "<group>"; };
+		8B91366D28356A5900E870AA /* LoadHeroDetailsUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadHeroDetailsUseCaseInterface.swift; sourceTree = "<group>"; };
 		8BC9D16B282FBE300004D46B /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC9D16E282FBE300004D46B /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		8BC9D16F282FBE300004D46B /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 			children = (
 				8B9130D32831727F00E870AA /* Models */,
 				8B9131822831AF0000E870AA /* HeroState.swift */,
+				8B9136442834F61700E870AA /* HeroesStoreInterface.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				8B9130E5283174E600E870AA /* LoadHeroesUseCaseInterface.swift */,
+				8B91366D28356A5900E870AA /* LoadHeroDetailsUseCaseInterface.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -325,7 +331,9 @@
 				8B9131832831AF0000E870AA /* HeroState.swift in Sources */,
 				8B9131962832319B00E870AA /* ServerAddressProviderInterface.swift in Sources */,
 				8B9130DE283173E900E870AA /* HeroDetailsError.swift in Sources */,
+				8B9136452834F61700E870AA /* HeroesStoreInterface.swift in Sources */,
 				8B9130E6283174E600E870AA /* LoadHeroesUseCaseInterface.swift in Sources */,
+				8B91366E28356A5900E870AA /* LoadHeroDetailsUseCaseInterface.swift in Sources */,
 				8B9130D72831732D00E870AA /* HeroError.swift in Sources */,
 				8B91314A283192F800E870AA /* HeroesActions.swift in Sources */,
 				8B9131862831B00100E870AA /* HeroesModelFactory.swift in Sources */,

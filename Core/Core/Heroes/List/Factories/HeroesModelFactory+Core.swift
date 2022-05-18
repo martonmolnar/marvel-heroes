@@ -11,12 +11,12 @@ import Domain
 extension HeroesModelFactory {
     static var mockHeroes: [Hero] {
         return [
-            mockHero(),
-            mockHero()
+//            mockHero(),
+//            mockHero()
         ]
     }
 
-    static func mockHero() -> Hero {
-        return Hero(id: 1, name: "TestHero", description: "TestDescription")
-    }
+//    static func mockHero() -> Hero {
+//        return Hero(id: 1, name: "TestHero", description: "TestDescription")
+//    }
 }

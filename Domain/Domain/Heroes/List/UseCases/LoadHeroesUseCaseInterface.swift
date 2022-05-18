@@ -8,5 +8,5 @@
 import Common
 
 public protocol LoadHeroesUseCaseInterface: UseCase {
-    func execute()
+    func execute(with searchText: String?)
 }

@@ -9,9 +9,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class HeroesListScreen: BaseViewController {
+final class HeroesListScreen: StaticViewController {
     // MARK: - Components
-    private let stackComponent = HeroesStackComponent()
+    private var searchFieldComponent: SearchFieldComponent!
     private let tableViewComponent = TableViewComponent<HeroesCell>(id: AccessibilityId.list)
     
     // MARK: - Properties
@@ -33,22 +33,21 @@ final class HeroesListScreen: BaseViewController {
 // MARK: - Private
 private extension HeroesListScreen {
     func setupComponents() {
-        setupStackComponent()
-        add(component: stackComponent, with: Constants.componentSpacing)
-        tableViewComponent.config = TableViewComponentConfig(pullToRefreshEnabled: true)
+        
+        setupSearchFieldComponent()
+        tableViewComponent.config = TableViewComponentConfig(pullToRefreshEnabled: false)
+        add(topComponent: searchFieldComponent)
         add(component: tableViewComponent)
     }
 
-    func setupStackComponent() {
-        stackComponent.stackView.axis = .horizontal
-        stackComponent.stackView.alignment = .fill
-        stackComponent.stackView.distribution = .equalSpacing
-        stackComponent.stackView.layoutMargins = Constants.stackViewLayoutMargins
-        stackComponent.stackView.isLayoutMarginsRelativeArrangement = true
+    func setupSearchFieldComponent() {
+        searchFieldComponent = SearchFieldComponent.instantiateFromNib()
+        searchFieldComponent.anchorToSuperview()
     }
 
     func setupBindings() {
         let events = HeroesListEventListener.Events(
+            textSearchEvents: searchFieldComponent.events,
             viewWillAppear: rx.viewWillAppear,
             listEvents: tableViewComponent.events,
             cellEvents: ControlEvent(events: tableViewComponent.cellEvents)
@@ -59,10 +58,6 @@ private extension HeroesListScreen {
 
         self.title = data.title
         tableViewComponent.bind(data: data.listData)
-
-//        data.isLoading
-//            .drive(LoadingScreen.rx.loading)
-//            .disposed(by: bag)
     }
 }
 

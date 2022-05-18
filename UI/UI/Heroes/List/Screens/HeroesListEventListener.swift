@@ -30,16 +30,22 @@ final class HeroesListEventListener {
 // MARK: - EventListener
 extension HeroesListEventListener: EventListener {
     struct Events {
+        let textSearchEvents: SearchFieldComponent.Events
         let viewWillAppear: ControlEvent<Void>
         let listEvents: TableViewComponent<HeroesCell>.Events
         let cellEvents: ControlEvent<TableViewComponent<HeroesCell>.CellEvents>
     }
 
     func listen(events: Events) {
+        events.textSearchEvents.searchFieldDidEndEditing
+            .subscribe(onNext: { [weak self] (searchText: String?) in
+                self?.loadHeroesUseCase.execute(with: searchText)
+            })
+            .disposed(by: bag)
 
         events.viewWillAppear
             .bind(onNext: { [weak self] in
-                self?.loadHeroesUseCase.execute()
+                self?.loadHeroesUseCase.execute(with: nil)
             })
             .disposed(by: bag)
 
@@ -51,7 +57,7 @@ extension HeroesListEventListener: EventListener {
             .bind { [weak self] hero in
                 guard let self = self,
                       let hero = hero else { return }
-                self.coordinator.didSelectHero(id: hero.id)
+                self.coordinator.didSelectHero(hero: hero)
             }
             .disposed(by: bag)
     }

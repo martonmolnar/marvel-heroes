@@ -10,10 +10,9 @@ public struct HeroesListApiModel: APIModel {
     public let heroes: [HeroApiModel]
     enum CodingKeys: String, CodingKey {
         case data = "data"
-        case results
     }
 
-    enum GiftKeys: String, CodingKey {
+    enum ResultKeys: String, CodingKey {
       case results = "results"
     }
 
@@ -23,9 +22,8 @@ public struct HeroesListApiModel: APIModel {
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        var elementListForType = try container.nestedContainer(keyedBy: GiftKeys.self, forKey: .data)
-        heroes = try elementListForType.decodeArray(.results)
-        print(heroes)
+        let data = try container.nestedContainer(keyedBy: ResultKeys.self, forKey: .data)
+        heroes = try data.decodeArray(.results)
     }
 
     public func encode(to encoder: Encoder) throws {

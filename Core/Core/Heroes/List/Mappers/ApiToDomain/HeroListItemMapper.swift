@@ -18,6 +18,7 @@ final class DefaultHeroesListItemMapper: HeroListItemMapperInterface {
             let hero = Hero(
                 id: item.id,
                 name: item.name,
+                imageUri: item.imageUri?.absoluteString ?? "",
                 description: item.description
             )
             return hero

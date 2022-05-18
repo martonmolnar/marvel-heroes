@@ -8,5 +8,5 @@
 import RxSwift
 
 protocol HeroServiceInterface {
-    func getHeroes() -> Single<Heroes.Hero.GetHeroesList.Response>
+    func getHeroes(searchText: String?) -> Single<Heroes.Hero.GetHeroesList.Response>
 }

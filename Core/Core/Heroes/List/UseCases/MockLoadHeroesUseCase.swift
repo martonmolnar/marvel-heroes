@@ -22,7 +22,7 @@ final class MockLoadHeroesUseCase {
 
 // MARK: - LoadHeroesUseCaseInterface
 extension MockLoadHeroesUseCase: LoadHeroesUseCaseInterface {
-    func execute() {
+    func execute(with searchText: String?) {
         let heroes = HeroesModelFactory.mockHeroes
         let action: HeroesActions = .didLoadHeroes(heroes: heroes)
         dispatcher.dispatch(action)
