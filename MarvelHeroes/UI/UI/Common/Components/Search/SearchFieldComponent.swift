@@ -30,8 +30,8 @@ final class SearchFieldComponent: UIView {
     // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
-
         setup()
+        setAccessibilityIds()
     }
 }
 
@@ -96,8 +96,8 @@ private extension SearchFieldComponent {
 
     func setAccessibilityIds() {
         guard let id = self.accessibilityIdentifier else { return }
-//        textField?.accessibilityIdentifier =
-//            AccessibilityIdGenerator.idForTextView(with: "\(id)_\(AccessibilityId.textField)")
+        textField?.accessibilityIdentifier =
+            AccessibilityIdGenerator.idForTextField(with: "\(id)_\(AccessibilityId.textField)")
     }
 }
 

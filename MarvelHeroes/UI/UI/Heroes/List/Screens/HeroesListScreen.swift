@@ -73,9 +73,6 @@ private extension HeroesListScreen {
 // MARK: - Accessibility
 private extension HeroesListScreen {
     enum AccessibilityId {
-        static let selectedFilters = "selected_filters"
-        static let activateAll = "activate_all"
-        static let infoLabel = "info_label"
         static let list = "list"
     }
 }
