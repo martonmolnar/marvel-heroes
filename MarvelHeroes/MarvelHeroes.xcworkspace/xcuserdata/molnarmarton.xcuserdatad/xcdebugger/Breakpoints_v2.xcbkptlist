@@ -1711,7 +1711,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "100"
             endingLineNumber = "100"
-            landmarkName = "testDiscountDetailsLoaded()"
+            landmarkName = "testHeroesDetailsLoaded()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1728,6 +1728,134 @@
             startingLineNumber = "33"
             endingLineNumber = "33"
             landmarkName = "execute(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B83A17F4-694D-4040-A3D4-F34EA253D340"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MarvelHeroesUITests/Robots/HeroesRobot.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "startApp(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "977CD325-BBD9-4502-905B-3EDDA941DFE7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MarvelHeroesUITests/Tests/HeroesTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "setUpWithError()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "93A45CF2-51F7-4DCC-8258-6681C8A79655"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MarvelHeroesUITests/Tests/HeroesTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "setUpWithError()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D780E064-60C5-473A-9C5E-BA192961B2D5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UI/UI/Common/Components/TableViewComponent/TableViewComponent.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "contentCell(for:data:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D780E064-60C5-473A-9C5E-BA192961B2D5 - 64848f8fd64e178d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UI.TableViewComponent.contentCell(for: Foundation.IndexPath, data: &#x3c4;_0_0.Data) -&gt; __C.UITableViewCell"
+                  moduleName = "UI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/molnarmarton/Documents/marvel-heroes/MarvelHeroes/UI/UI/Common/Components/TableViewComponent/TableViewComponent.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "2604">
+               </Location>
+               <Location
+                  uuid = "D780E064-60C5-473A-9C5E-BA192961B2D5 - 64848f8fd64e17cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UI.TableViewComponent.contentCell(for: Foundation.IndexPath, data: &#x3c4;_0_0.Data) -&gt; __C.UITableViewCell"
+                  moduleName = "UI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/molnarmarton/Documents/marvel-heroes/MarvelHeroes/UI/UI/Common/Components/TableViewComponent/TableViewComponent.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "1606">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "799A45B4-30D6-4FC7-8B27-0F15FB7FF5F1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UI/UI/Common/Components/TableViewComponent/TableViewComponent.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "contentCell(for:data:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D4484A9-3E1C-4A04-8919-1D48C7CA3FB8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UI/UI/Heroes/List/Screens/HeroesListScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "setupComponents()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

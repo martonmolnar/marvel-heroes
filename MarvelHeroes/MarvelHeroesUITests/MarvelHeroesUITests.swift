@@ -26,7 +26,7 @@ class MarvelHeroesUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
+        checkInitialState(app: app)
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
@@ -37,5 +37,21 @@ class MarvelHeroesUITests: XCTestCase {
                 XCUIApplication().launch()
             }
         }
+    }
+
+    func checkInitialState(app: XCUIApplication) {
+        // Given
+        let searchField = app.textFields[AccessibilityId.HeroesListScreen.searchFieldId]
+        let cell = app.cells[AccessibilityId.HeroesListScreen.cellId]
+        // Then
+        XCTAssert(searchField.waitForExistence(timeout: 5))
+        XCTAssert(cell.waitForExistence(timeout: 5))
+    }
+}
+
+private enum AccessibilityId {
+    enum HeroesListScreen {
+        static let searchFieldId = "searchfieldcomponent_searchField_inputfield_id"
+        static let cellId = "0_0_listCell_cell_id"
     }
 }
