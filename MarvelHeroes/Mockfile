@@ -25,10 +25,8 @@ DomainTests:
   - Domain
   import:
   - Common
-  - CoreLocation
   - RxSwift
   - RxRelay
-  - Realm
   - RealmSwift
 
 CoreTests:
@@ -44,10 +42,8 @@ CoreTests:
   - Core
   import:
   - Common
-  - Curve25519Kit
   - Domain
   - Foundation
-  - RealmSwift
   - RxRelay
   - RxSwift
 
@@ -64,15 +60,11 @@ UITests:
   - UI
   import:
   - Common
-  - CoreLocation
   - Domain
   - Foundation
   - UIKit
   - RxSwift
   - RxRelay
-  - Realm
-  - RealmSwift
-  - PassKit
 
 MarvelHeroesTests:
   sources:
@@ -94,6 +86,3 @@ MarvelHeroesTests:
   - RxSwift
   - Core
   - UI
-  - Realm
-  - RealmSwift
-  - PassKit

@@ -8,6 +8,6 @@
 import Common
 import Domain
 
-protocol HeroesListCoordinatorInterface: Coordinator {
+protocol HeroesListCoordinatorInterface: Coordinator, AutoMockable {
     func didSelectHero(hero: Hero)
 }

@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		8B631E412835AADC0066E64B /* AutoMockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E402835AADC0066E64B /* AutoMockable.swift */; };
+		8B631E4C2835B1A90066E64B /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E4B2835B1A90066E64B /* BaseTestCase.swift */; };
+		8B631E4F2835B2200066E64B /* AssertionWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E4E2835B2200066E64B /* AssertionWrapper.swift */; };
+		8B631EA82835E7B60066E64B /* ResolverGetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631EA72835E7B60066E64B /* ResolverGetTest.swift */; };
+		8B631EAB2835E84F0066E64B /* SchedulerProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631EAA2835E84F0066E64B /* SchedulerProviderTests.swift */; };
+		8B631EB32835E9B70066E64B /* CommonMock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631EB22835E9B70066E64B /* CommonMock.generated.swift */; };
+		8B631EB72835EA010066E64B /* DispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631EB62835EA010066E64B /* DispatcherTests.swift */; };
+		8B631EB92835EA860066E64B /* AnyMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631EB82835EA860066E64B /* AnyMapperTests.swift */; };
+		8B631EBB2835EABC0066E64B /* AnyStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631EBA2835EABC0066E64B /* AnyStoreTests.swift */; };
 		8B9130E22831747200E870AA /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9130E12831747200E870AA /* State.swift */; };
 		8B9130E92831751E00E870AA /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9130E82831751E00E870AA /* UseCase.swift */; };
 		8B9130F92831769200E870AA /* URL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9130F82831769200E870AA /* URL+QueryParameters.swift */; };
@@ -53,6 +61,14 @@
 		4BAD6D982142714E3ADF624B /* Pods_Common_CommonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Common_CommonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3F583EECD5B1299420180C /* Pods-Common.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common.debug.xcconfig"; path = "../../Pods/Target Support Files/Pods-Common/Pods-Common.debug.xcconfig"; sourceTree = "<group>"; };
 		8B631E402835AADC0066E64B /* AutoMockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.swift; sourceTree = "<group>"; };
+		8B631E4B2835B1A90066E64B /* BaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
+		8B631E4E2835B2200066E64B /* AssertionWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertionWrapper.swift; sourceTree = "<group>"; };
+		8B631EA72835E7B60066E64B /* ResolverGetTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverGetTest.swift; sourceTree = "<group>"; };
+		8B631EAA2835E84F0066E64B /* SchedulerProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerProviderTests.swift; sourceTree = "<group>"; };
+		8B631EB22835E9B70066E64B /* CommonMock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonMock.generated.swift; sourceTree = "<group>"; };
+		8B631EB62835EA010066E64B /* DispatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatcherTests.swift; sourceTree = "<group>"; };
+		8B631EB82835EA860066E64B /* AnyMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyMapperTests.swift; sourceTree = "<group>"; };
+		8B631EBA2835EABC0066E64B /* AnyStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyStoreTests.swift; sourceTree = "<group>"; };
 		8B9130E12831747200E870AA /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		8B9130E82831751E00E870AA /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		8B9130F82831769200E870AA /* URL+QueryParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+QueryParameters.swift"; sourceTree = "<group>"; };
@@ -123,6 +139,72 @@
 			);
 			name = Pods;
 			path = ../MarvelHeroes/Pods;
+			sourceTree = "<group>";
+		};
+		8B631E4A2835B1980066E64B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E4B2835B1A90066E64B /* BaseTestCase.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		8B631E4D2835B20C0066E64B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E4E2835B2200066E64B /* AssertionWrapper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		8B631EA52835E7980066E64B /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				8B631EA62835E79F0066E64B /* Container */,
+				8B631EB82835EA860066E64B /* AnyMapperTests.swift */,
+				8B631EBA2835EABC0066E64B /* AnyStoreTests.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		8B631EA62835E79F0066E64B /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				8B631EA72835E7B60066E64B /* ResolverGetTest.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		8B631EA92835E8440066E64B /* Scheduler */ = {
+			isa = PBXGroup;
+			children = (
+				8B631EAA2835E84F0066E64B /* SchedulerProviderTests.swift */,
+			);
+			path = Scheduler;
+			sourceTree = "<group>";
+		};
+		8B631EB12835E9B70066E64B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8B631EB22835E9B70066E64B /* CommonMock.generated.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		8B631EB42835E9E70066E64B /* Flux */ = {
+			isa = PBXGroup;
+			children = (
+				8B631EB52835E9EC0066E64B /* Dispatcher */,
+			);
+			path = Flux;
+			sourceTree = "<group>";
+		};
+		8B631EB52835E9EC0066E64B /* Dispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				8B631EB62835EA010066E64B /* DispatcherTests.swift */,
+			);
+			path = Dispatcher;
 			sourceTree = "<group>";
 		};
 		8B9130DF2831745F00E870AA /* Flux */ = {
@@ -273,6 +355,7 @@
 		8BC9D149282FBE120004D46B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8B631E4D2835B20C0066E64B /* Utilities */,
 				8B91317F2831ADD200E870AA /* Scheduler */,
 				8B91310B28317B3000E870AA /* Protocols */,
 				8B9130F52831767200E870AA /* Extensions */,
@@ -287,6 +370,11 @@
 		8BC9D155282FBE120004D46B /* CommonTests */ = {
 			isa = PBXGroup;
 			children = (
+				8B631EB42835E9E70066E64B /* Flux */,
+				8B631EB12835E9B70066E64B /* Mocks */,
+				8B631EA92835E8440066E64B /* Scheduler */,
+				8B631EA52835E7980066E64B /* DI */,
+				8B631E4A2835B1980066E64B /* Base */,
 				8BC9D156282FBE120004D46B /* CommonTests.swift */,
 			);
 			path = CommonTests;
@@ -482,6 +570,7 @@
 			files = (
 				8B91316328319D6E00E870AA /* Store.swift in Sources */,
 				8B9131712831A80700E870AA /* ServiceType.swift in Sources */,
+				8B631E4F2835B2200066E64B /* AssertionWrapper.swift in Sources */,
 				8B631E412835AADC0066E64B /* AutoMockable.swift in Sources */,
 				8BC9D14C282FBE120004D46B /* Common.docc in Sources */,
 				8B91314D2831932C00E870AA /* Action.swift in Sources */,
@@ -510,7 +599,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B631EAB2835E84F0066E64B /* SchedulerProviderTests.swift in Sources */,
+				8B631E4C2835B1A90066E64B /* BaseTestCase.swift in Sources */,
+				8B631EB72835EA010066E64B /* DispatcherTests.swift in Sources */,
+				8B631EB32835E9B70066E64B /* CommonMock.generated.swift in Sources */,
+				8B631EB92835EA860066E64B /* AnyMapperTests.swift in Sources */,
 				8BC9D157282FBE120004D46B /* CommonTests.swift in Sources */,
+				8B631EBB2835EABC0066E64B /* AnyStoreTests.swift in Sources */,
+				8B631EA82835E7B60066E64B /* ResolverGetTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

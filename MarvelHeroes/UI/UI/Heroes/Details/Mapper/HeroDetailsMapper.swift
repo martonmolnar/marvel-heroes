@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 import UIKit
 
-protocol HeroDetailsUIMapperInterface {
+protocol HeroDetailsUIMapperInterface: AutoMockable {
     func mapDetails(from hero: Observable<Hero>) -> HeroDetailsComponent.Data
 }
 

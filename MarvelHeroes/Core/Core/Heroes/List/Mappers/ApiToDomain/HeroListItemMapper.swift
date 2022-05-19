@@ -11,8 +11,8 @@ import Domain
 typealias HeroListItemMapper = AnyMapper<[HeroApiModel], [Hero]>
 
 // sourcery: AutoMockable
-// sourcery: typealias = "InputModel = HeroApiModel"
-// sourcery: typealias = "OutputModel = Hero"
+// sourcery: typealias = "InputModel = [HeroApiModel]"
+// sourcery: typealias = "OutputModel = [Hero]"
 protocol HeroListItemMapperInterface: Mapper where InputModel == [HeroApiModel], OutputModel == [Hero] {}
 
 final class DefaultHeroesListItemMapper: HeroListItemMapperInterface {

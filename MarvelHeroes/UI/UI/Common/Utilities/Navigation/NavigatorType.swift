@@ -10,7 +10,7 @@ import Common
 
 public typealias ParameterReceiverController = (controller: UIViewController, parameter: NavigationParameter?)
 
-public protocol NavigatorType: AnyObject {
+public protocol NavigatorType: AnyObject, AutoMockable {
     var navigationController: UINavigationController? { get }
 
     var currentViewController: UIViewController? { get }

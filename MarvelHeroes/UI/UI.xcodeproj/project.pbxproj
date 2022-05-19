@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		072547F418E901240281F5CE /* Pods_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B986176D64C126E488F9732F /* Pods_UI.framework */; };
+		8B631E852835CA510066E64B /* HeroesListCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E842835CA510066E64B /* HeroesListCoordinatorTests.swift */; };
+		8B631E892835CBA10066E64B /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E882835CBA10066E64B /* BaseTestCase.swift */; };
+		8B631E8D2835CBDB0066E64B /* UIMock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E8C2835CBDB0066E64B /* UIMock.generated.swift */; };
+		8B631E922835CDB80066E64B /* HeroesListItemUIMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E912835CDB80066E64B /* HeroesListItemUIMapperTests.swift */; };
+		8B631E952835CED40066E64B /* HeroesModelFactory+UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E942835CED40066E64B /* HeroesModelFactory+UITests.swift */; };
+		8B631E972835D11F0066E64B /* HeroesListDataBinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E962835D11F0066E64B /* HeroesListDataBinderTests.swift */; };
+		8B631E9C2835D44B0066E64B /* HeroesListEventListenerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E9B2835D44B0066E64B /* HeroesListEventListenerTests.swift */; };
+		8B631EA02835DE130066E64B /* HeroDetailsUIMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E9F2835DE130066E64B /* HeroDetailsUIMapperTests.swift */; };
+		8B631EA22835E11E0066E64B /* HeroDetailsDataBinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631EA12835E11E0066E64B /* HeroDetailsDataBinderTests.swift */; };
+		8B631EA42835E42E0066E64B /* HeroDetailsEventListenerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631EA32835E42E0066E64B /* HeroDetailsEventListenerTests.swift */; };
 		8B9130BB2831454300E870AA /* HeroesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9130BA2831454300E870AA /* HeroesAssembly.swift */; };
 		8B9130BE283145CD00E870AA /* UIAssemblyCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9130BD283145CD00E870AA /* UIAssemblyCollector.swift */; };
 		8B9130C428314E3C00E870AA /* HeroesStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9130C328314E3C00E870AA /* HeroesStackView.swift */; };
@@ -96,6 +106,16 @@
 		4ECD1C8BF54B343296094A24 /* Pods-UI-UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI-UITests.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-UI-UITests/Pods-UI-UITests.release.xcconfig"; sourceTree = "<group>"; };
 		56C6D6E4E9295C2F7D362FB3 /* Pods-UI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI.debug.xcconfig"; path = "../../Pods/Target Support Files/Pods-UI/Pods-UI.debug.xcconfig"; sourceTree = "<group>"; };
 		5FD33A4F4524974BDDCCC504 /* Pods_UI_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UI_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B631E842835CA510066E64B /* HeroesListCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListCoordinatorTests.swift; sourceTree = "<group>"; };
+		8B631E882835CBA10066E64B /* BaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
+		8B631E8C2835CBDB0066E64B /* UIMock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMock.generated.swift; sourceTree = "<group>"; };
+		8B631E912835CDB80066E64B /* HeroesListItemUIMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListItemUIMapperTests.swift; sourceTree = "<group>"; };
+		8B631E942835CED40066E64B /* HeroesModelFactory+UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeroesModelFactory+UITests.swift"; sourceTree = "<group>"; };
+		8B631E962835D11F0066E64B /* HeroesListDataBinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListDataBinderTests.swift; sourceTree = "<group>"; };
+		8B631E9B2835D44B0066E64B /* HeroesListEventListenerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListEventListenerTests.swift; sourceTree = "<group>"; };
+		8B631E9F2835DE130066E64B /* HeroDetailsUIMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsUIMapperTests.swift; sourceTree = "<group>"; };
+		8B631EA12835E11E0066E64B /* HeroDetailsDataBinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsDataBinderTests.swift; sourceTree = "<group>"; };
+		8B631EA32835E42E0066E64B /* HeroDetailsEventListenerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsEventListenerTests.swift; sourceTree = "<group>"; };
 		8B9130BA2831454300E870AA /* HeroesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesAssembly.swift; sourceTree = "<group>"; };
 		8B9130BD283145CD00E870AA /* UIAssemblyCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAssemblyCollector.swift; sourceTree = "<group>"; };
 		8B9130C328314E3C00E870AA /* HeroesStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesStackView.swift; sourceTree = "<group>"; };
@@ -178,6 +198,100 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B631E812835CA280066E64B /* Heroes */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E9D2835DDDF0066E64B /* Details */,
+				8B631E822835CA300066E64B /* List */,
+			);
+			path = Heroes;
+			sourceTree = "<group>";
+		};
+		8B631E822835CA300066E64B /* List */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E932835CEAF0066E64B /* Factories */,
+				8B631E8E2835CD550066E64B /* Mapper */,
+				8B631E832835CA390066E64B /* Coordinator */,
+				8B631E962835D11F0066E64B /* HeroesListDataBinderTests.swift */,
+				8B631E9B2835D44B0066E64B /* HeroesListEventListenerTests.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		8B631E832835CA390066E64B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E842835CA510066E64B /* HeroesListCoordinatorTests.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		8B631E862835CB510066E64B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E872835CB940066E64B /* Base */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8B631E872835CB940066E64B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E882835CBA10066E64B /* BaseTestCase.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		8B631E8B2835CBDB0066E64B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E8C2835CBDB0066E64B /* UIMock.generated.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		8B631E8E2835CD550066E64B /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E912835CDB80066E64B /* HeroesListItemUIMapperTests.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		8B631E932835CEAF0066E64B /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E942835CED40066E64B /* HeroesModelFactory+UITests.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		8B631E982835D2E80066E64B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		8B631E9D2835DDDF0066E64B /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E9E2835DE010066E64B /* Mapper */,
+				8B631EA12835E11E0066E64B /* HeroDetailsDataBinderTests.swift */,
+				8B631EA32835E42E0066E64B /* HeroDetailsEventListenerTests.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		8B631E9E2835DE010066E64B /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E9F2835DE130066E64B /* HeroDetailsUIMapperTests.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
 		8B9130B92831450C00E870AA /* DI */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,13 +326,6 @@
 				8B9130C52831507200E870AA /* HeroesStackComponent.swift */,
 			);
 			path = Stack;
-			sourceTree = "<group>";
-		};
-		8B9130CD283171CF00E870AA /* Store */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Store;
 			sourceTree = "<group>";
 		};
 		8B9130EF283175EA00E870AA /* Coordinator */ = {
@@ -344,6 +451,10 @@
 		8BC9D19D282FBE4C0004D46B /* UITests */ = {
 			isa = PBXGroup;
 			children = (
+				8B631E982835D2E80066E64B /* Helper */,
+				8B631E8B2835CBDB0066E64B /* Mocks */,
+				8B631E862835CB510066E64B /* Common */,
+				8B631E812835CA280066E64B /* Heroes */,
 				8BC9D19E282FBE4C0004D46B /* UITests.swift */,
 			);
 			path = UITests;
@@ -363,7 +474,6 @@
 			isa = PBXGroup;
 			children = (
 				8B9130EF283175EA00E870AA /* Coordinator */,
-				8B9130CD283171CF00E870AA /* Store */,
 				8BC9D213283138B50004D46B /* Screens */,
 				8BC9D1D0282FCED60004D46B /* Components */,
 			);
@@ -758,6 +868,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B631E972835D11F0066E64B /* HeroesListDataBinderTests.swift in Sources */,
+				8B631E922835CDB80066E64B /* HeroesListItemUIMapperTests.swift in Sources */,
+				8B631E9C2835D44B0066E64B /* HeroesListEventListenerTests.swift in Sources */,
+				8B631EA42835E42E0066E64B /* HeroDetailsEventListenerTests.swift in Sources */,
+				8B631E852835CA510066E64B /* HeroesListCoordinatorTests.swift in Sources */,
+				8B631EA22835E11E0066E64B /* HeroDetailsDataBinderTests.swift in Sources */,
+				8B631E892835CBA10066E64B /* BaseTestCase.swift in Sources */,
+				8B631E8D2835CBDB0066E64B /* UIMock.generated.swift in Sources */,
+				8B631E952835CED40066E64B /* HeroesModelFactory+UITests.swift in Sources */,
+				8B631EA02835DE130066E64B /* HeroDetailsUIMapperTests.swift in Sources */,
 				8BC9D19F282FBE4C0004D46B /* UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

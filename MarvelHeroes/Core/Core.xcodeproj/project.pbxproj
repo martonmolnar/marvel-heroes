@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		6EEABCBEB056D9720A2220E6 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2858810150AF2BE0C4AA40AD /* Pods_Core.framework */; };
+		8B631E432835AF220066E64B /* BastStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E422835AF220066E64B /* BastStoreTests.swift */; };
+		8B631E452835AF850066E64B /* CoreMock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E442835AF850066E64B /* CoreMock.generated.swift */; };
+		8B631E6F2835B6980066E64B /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E6E2835B6980066E64B /* BaseTestCase.swift */; };
+		8B631E732835BA580066E64B /* HeroesStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E722835BA580066E64B /* HeroesStoreTests.swift */; };
+		8B631E762835BBC20066E64B /* HeroesModelFactory+CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E752835BBC20066E64B /* HeroesModelFactory+CoreTests.swift */; };
+		8B631E7B2835BE490066E64B /* HeroesListItemMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E7A2835BE490066E64B /* HeroesListItemMapperTests.swift */; };
+		8B631E7E2835C1320066E64B /* LoadHeroesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E7D2835C1320066E64B /* LoadHeroesUseCaseTests.swift */; };
+		8B631E802835C7100066E64B /* LoadHeroDetailsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B631E7F2835C7100066E64B /* LoadHeroDetailsUseCaseTests.swift */; };
 		8B91311A283183D500E870AA /* LoadHeroesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B913119283183D500E870AA /* LoadHeroesUseCase.swift */; };
 		8B9131202831848D00E870AA /* DefaultHeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91311F2831848D00E870AA /* DefaultHeroService.swift */; };
 		8B9131262831884400E870AA /* ApiClientServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9131252831884400E870AA /* ApiClientServiceInterface.swift */; };
@@ -42,7 +50,6 @@
 		8B9131A62833D5AB00E870AA /* HeroesModelFactory+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9131A52833D5AB00E870AA /* HeroesModelFactory+Core.swift */; };
 		8B9131A82833D67100E870AA /* MockLoadHeroesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9131A72833D67100E870AA /* MockLoadHeroesUseCase.swift */; };
 		8B91366C2835695600E870AA /* LoadHeroDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91366B2835695600E870AA /* LoadHeroDetailsUseCase.swift */; };
-		8B91367428358ED700E870AA /* BaseStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91367328358ED700E870AA /* BaseStoreTests.swift */; };
 		8BC9D1B8282FBE620004D46B /* Core.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9D1B7282FBE620004D46B /* Core.docc */; };
 		8BC9D1BE282FBE620004D46B /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC9D1B3282FBE620004D46B /* Core.framework */; };
 		8BC9D1C3282FBE620004D46B /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9D1C2282FBE620004D46B /* CoreTests.swift */; };
@@ -80,6 +87,15 @@
 		2858810150AF2BE0C4AA40AD /* Pods_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4AA15084B51F42F483C056 /* Pods_Core_CoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core_CoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		614EC4D526C6BC82ADCC7207 /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
+		8B631E422835AF220066E64B /* BastStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BastStoreTests.swift; sourceTree = "<group>"; };
+		8B631E442835AF850066E64B /* CoreMock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreMock.generated.swift; sourceTree = "<group>"; };
+		8B631E6A2835B5620066E64B /* libCommonTestUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCommonTestUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B631E6E2835B6980066E64B /* BaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
+		8B631E722835BA580066E64B /* HeroesStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesStoreTests.swift; sourceTree = "<group>"; };
+		8B631E752835BBC20066E64B /* HeroesModelFactory+CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeroesModelFactory+CoreTests.swift"; sourceTree = "<group>"; };
+		8B631E7A2835BE490066E64B /* HeroesListItemMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListItemMapperTests.swift; sourceTree = "<group>"; };
+		8B631E7D2835C1320066E64B /* LoadHeroesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadHeroesUseCaseTests.swift; sourceTree = "<group>"; };
+		8B631E7F2835C7100066E64B /* LoadHeroDetailsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadHeroDetailsUseCaseTests.swift; sourceTree = "<group>"; };
 		8B913119283183D500E870AA /* LoadHeroesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadHeroesUseCase.swift; sourceTree = "<group>"; };
 		8B91311F2831848D00E870AA /* DefaultHeroService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHeroService.swift; sourceTree = "<group>"; };
 		8B9131252831884400E870AA /* ApiClientServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientServiceInterface.swift; sourceTree = "<group>"; };
@@ -112,7 +128,6 @@
 		8B9131A52833D5AB00E870AA /* HeroesModelFactory+Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeroesModelFactory+Core.swift"; sourceTree = "<group>"; };
 		8B9131A72833D67100E870AA /* MockLoadHeroesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoadHeroesUseCase.swift; sourceTree = "<group>"; };
 		8B91366B2835695600E870AA /* LoadHeroDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadHeroDetailsUseCase.swift; sourceTree = "<group>"; };
-		8B91367328358ED700E870AA /* BaseStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStoreTests.swift; sourceTree = "<group>"; };
 		8BC9D1B3282FBE620004D46B /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC9D1B6282FBE620004D46B /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		8BC9D1B7282FBE620004D46B /* Core.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Core.docc; sourceTree = "<group>"; };
@@ -148,6 +163,7 @@
 		1680CF1EFFB4FE6413868996 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B631E6A2835B5620066E64B /* libCommonTestUtils.a */,
 				8B9131412831916200E870AA /* Common.framework */,
 				8B9131422831916200E870AA /* Domain.framework */,
 				2858810150AF2BE0C4AA40AD /* Pods_Core.framework */,
@@ -166,6 +182,66 @@
 			);
 			name = Pods;
 			path = ../MarvelHeroes/Pods;
+			sourceTree = "<group>";
+		};
+		8B631E702835BA340066E64B /* Heroes */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E7C2835C1120066E64B /* UseCases */,
+				8B631E772835BE140066E64B /* List */,
+				8B631E742835BBA60066E64B /* Factories */,
+				8B631E712835BA460066E64B /* Store */,
+			);
+			path = Heroes;
+			sourceTree = "<group>";
+		};
+		8B631E712835BA460066E64B /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E722835BA580066E64B /* HeroesStoreTests.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		8B631E742835BBA60066E64B /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E752835BBC20066E64B /* HeroesModelFactory+CoreTests.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		8B631E772835BE140066E64B /* List */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E782835BE250066E64B /* Mappers */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		8B631E782835BE250066E64B /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E792835BE2A0066E64B /* ApiToDomain */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		8B631E792835BE2A0066E64B /* ApiToDomain */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E7A2835BE490066E64B /* HeroesListItemMapperTests.swift */,
+			);
+			path = ApiToDomain;
+			sourceTree = "<group>";
+		};
+		8B631E7C2835C1120066E64B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				8B631E7D2835C1320066E64B /* LoadHeroesUseCaseTests.swift */,
+				8B631E7F2835C7100066E64B /* LoadHeroDetailsUseCaseTests.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		8B913116283183A300E870AA /* Heroes */ = {
@@ -344,7 +420,8 @@
 		8B91367228358EC600E870AA /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				8B91367328358ED700E870AA /* BaseStoreTests.swift */,
+				8B631E422835AF220066E64B /* BastStoreTests.swift */,
+				8B631E6E2835B6980066E64B /* BaseTestCase.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -352,6 +429,7 @@
 		8B91367A2835957800E870AA /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				8B631E442835AF850066E64B /* CoreMock.generated.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -389,6 +467,7 @@
 		8BC9D1C1282FBE620004D46B /* CoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				8B631E702835BA340066E64B /* Heroes */,
 				8B91367A2835957800E870AA /* Mocks */,
 				8B91367128358EBE00E870AA /* Common */,
 				8BC9D1C2282FBE620004D46B /* CoreTests.swift */,
@@ -611,8 +690,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B91367428358ED700E870AA /* BaseStoreTests.swift in Sources */,
+				8B631E802835C7100066E64B /* LoadHeroDetailsUseCaseTests.swift in Sources */,
+				8B631E7B2835BE490066E64B /* HeroesListItemMapperTests.swift in Sources */,
+				8B631E7E2835C1320066E64B /* LoadHeroesUseCaseTests.swift in Sources */,
+				8B631E6F2835B6980066E64B /* BaseTestCase.swift in Sources */,
 				8BC9D1C3282FBE620004D46B /* CoreTests.swift in Sources */,
+				8B631E452835AF850066E64B /* CoreMock.generated.swift in Sources */,
+				8B631E762835BBC20066E64B /* HeroesModelFactory+CoreTests.swift in Sources */,
+				8B631E732835BA580066E64B /* HeroesStoreTests.swift in Sources */,
+				8B631E432835AF220066E64B /* BastStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

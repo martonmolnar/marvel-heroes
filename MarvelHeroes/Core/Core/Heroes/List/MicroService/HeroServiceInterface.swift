@@ -8,6 +8,6 @@
 import RxSwift
 import Common
 
-protocol HeroServiceInterface {
+protocol HeroServiceInterface: AutoMockable {
     func getHeroes(searchText: String?) -> Single<Heroes.Hero.GetHeroesList.Response>
 }

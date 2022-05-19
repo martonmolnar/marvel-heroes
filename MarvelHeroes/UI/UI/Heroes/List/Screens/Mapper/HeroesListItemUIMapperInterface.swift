@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 import UIKit
 
-protocol HeroesListItemUIMapperInterface {
+protocol HeroesListItemUIMapperInterface: AutoMockable {
     func map(from state: HeroState) -> [HeroesCell.Data]?
 }
 

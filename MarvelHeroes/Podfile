@@ -25,6 +25,8 @@ NimbleVersion = '= 9.2.1'
 SwiftyMockyVersion = '= 4.0.4'
 RxTestVersion = '= 6.2.0'
 RxSwiftVersion = '= 6.2.0'
+RxBlockingVersion = '= 6.2.0'
+SwiftLintVersion = "= 0.44.0"
 
 target 'Common' do
     project 'Common/Common'
@@ -48,6 +50,8 @@ target 'UI' do
     target 'UITests' do
       pod 'Nimble', NimbleVersion
       pod 'SwiftyMocky', SwiftyMockyVersion
+      pod 'RxTest', RxTestVersion
+      pod 'RxBlocking', RxBlockingVersion
     end
 end
 
@@ -74,6 +78,7 @@ target 'MarvelHeroes' do
     pod 'RxAlamofire', RxAlamofireVersion
     pod 'lottie-ios', LottieVersion
     pod 'RxSwift', RxSwiftVersion
+    pod 'SwiftLint', SwiftLintVersion 
     
     target 'MarvelHeroesTests' do
       pod 'Nimble', NimbleVersion
