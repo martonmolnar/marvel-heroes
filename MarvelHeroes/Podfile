@@ -1,0 +1,112 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+plugin 'cocoapods-art', :sources => [ 'cocoapods-local' ]
+
+
+workspace 'MarvelHeroes'
+project 'MarvelHeroes.xcodeproj'
+project 'Common/Common.xcodeproj'
+project 'UI/UI.xcodeproj'
+project 'Domain/Domain.xcodeproj'
+project 'Core/Core.xcodeproj'
+
+use_frameworks!
+inhibit_all_warnings!
+
+SwinjectVersion = '= 2.8.0'
+RxSwiftExtVersion = '= 6.0.1'
+RxDataSourcesVersion = '= 5.0.0'
+RxAlamofireVersion = '= 6.1.1'
+LottieVersion = '= 3.2.3'
+NimbleVersion = '= 9.2.1'
+SwiftyMockyVersion = '= 4.0.4'
+RxTestVersion = '= 6.2.0'
+RxSwiftVersion = '= 6.2.0'
+RxBlockingVersion = '= 6.2.0'
+SwiftLintVersion = "= 0.44.0"
+
+target 'Common' do
+    project 'Common/Common'
+      pod 'Swinject', SwinjectVersion
+    pod 'RxSwiftExt', RxSwiftExtVersion
+    pod 'RxSwift', RxSwiftVersion
+
+    target 'CommonTests' do
+        pod 'Nimble', NimbleVersion
+        pod 'SwiftyMocky', SwiftyMockyVersion
+    end
+end
+
+target 'UI' do
+    project 'UI/UI'
+    pod 'Swinject', SwinjectVersion
+    pod 'RxSwiftExt', RxSwiftExtVersion
+    pod 'RxDataSources', RxDataSourcesVersion
+    pod 'lottie-ios', LottieVersion
+    
+    target 'UITests' do
+      pod 'Nimble', NimbleVersion
+      pod 'SwiftyMocky', SwiftyMockyVersion
+      pod 'RxTest', RxTestVersion
+      pod 'RxBlocking', RxBlockingVersion
+    end
+end
+
+target 'Core' do
+    project 'Core/Core'
+    pod 'Swinject', SwinjectVersion
+    pod 'RxSwiftExt', RxSwiftExtVersion
+    pod 'RxSwift', RxSwiftVersion
+    pod 'RxAlamofire', RxAlamofireVersion
+    
+    target 'CoreTests' do
+      pod 'Nimble', NimbleVersion
+      pod 'SwiftyMocky', SwiftyMockyVersion
+      pod 'RxTest', RxTestVersion
+    end
+end
+
+target 'MarvelHeroes' do
+    project 'MarvelHeroes.xcodeproj'
+
+    pod 'Swinject', SwinjectVersion 
+    pod 'RxSwiftExt', RxSwiftExtVersion
+    pod 'RxDataSources', RxDataSourcesVersion
+    pod 'RxAlamofire', RxAlamofireVersion
+    pod 'lottie-ios', LottieVersion
+    pod 'RxSwift', RxSwiftVersion
+    pod 'SwiftLint', SwiftLintVersion 
+    
+    target 'MarvelHeroesTests' do
+      pod 'Nimble', NimbleVersion
+      pod 'SwiftyMocky', SwiftyMockyVersion
+      pod 'RxTest', RxTestVersion
+    end
+end
+
+target 'Domain' do
+    project 'Domain/Domain'
+    
+    target 'DomainTests' do
+      pod 'Nimble', NimbleVersion
+      pod 'SwiftyMocky', SwiftyMockyVersion
+    end
+end
+    
+ExcludedSimulatorArchs = ""
+unless `arch`.strip == "arm64"
+    ExcludedSimulatorArchs = "arm64"
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_OPTIMIZATION_LEVEL'] = '-Owholemodule'
+            config.build_settings['OTHER_SWIFT_FLAGS'] ||= ['-Onone']
+            config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = ExcludedSimulatorArchs
+        end
+    end
+end

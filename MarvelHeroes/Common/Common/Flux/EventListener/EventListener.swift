@@ -5,7 +5,8 @@
 //  Created by Molnar Marton on 2022. 05. 15..
 //
 
-public protocol EventListener {
+// sourcery: associatedtype = "Events"
+public protocol EventListener: AutoMockable {
     associatedtype Events
 
     func listen(events: Events)

@@ -1,0 +1,88 @@
+sourceryCommand: null
+sourceryTemplate: null
+
+CommonTests:
+  sources:
+    include:
+    - ./Common/Common
+  output: ./Common/CommonTests/Mocks/CommonMock.generated.swift
+  targets:
+  - Common
+  testable:
+  - Common
+  import:
+  - RxSwift
+
+DomainTests:
+  sources:
+    include:
+    - ./Common/Common
+    - ./Domain/Domain
+  output: ./Domain/DomainTests/Mocks/DomainMock.generated.swift
+  targets:
+  - Domain
+  testable:
+  - Domain
+  import:
+  - Common
+  - RxSwift
+  - RxRelay
+  - RealmSwift
+
+CoreTests:
+  sources:
+    include:
+    - ./Common/Common
+    - ./Domain/Domain
+    - ./Core/Core
+  output: ./Core/CoreTests/Mocks/CoreMock.generated.swift
+  targets:
+  - Core
+  testable:
+  - Core
+  import:
+  - Common
+  - Domain
+  - Foundation
+  - RxRelay
+  - RxSwift
+
+UITests:
+  sources:
+    include:
+    - ./Common/Common
+    - ./Domain/Domain
+    - ./UI/UI
+  output: ./UI/UITests/Mocks/UIMock.generated.swift
+  targets:
+  - UI
+  testable:
+  - UI
+  import:
+  - Common
+  - Domain
+  - Foundation
+  - UIKit
+  - RxSwift
+  - RxRelay
+
+MarvelHeroesTests:
+  sources:
+    include:
+    - ./Common/Common
+    - ./Domain/Domain
+    - ./Core/Core
+    - ./UI/UI
+    - ./MarvelHeroes
+  output: ./MarvelHeroesTests/Mocks/MarvelHeroesMock.generated.swift
+  testable:
+  - Core
+  - UI
+  import:
+  - Foundation
+  - Common
+  - Domain
+  - RxRelay
+  - RxSwift
+  - Core
+  - UI
