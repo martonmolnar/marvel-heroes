@@ -3,9 +3,6 @@
 
 source 'https://github.com/CocoaPods/Specs.git'
 
-plugin 'cocoapods-art', :sources => [ 'cocoapods-local' ]
-
-
 workspace 'MarvelHeroes'
 project 'MarvelHeroes.xcodeproj'
 project 'Common/Common.xcodeproj'
